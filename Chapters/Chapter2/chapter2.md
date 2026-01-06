@@ -41,7 +41,7 @@ But, Figure *@directed2@* is a disconnected graph because the nodes F and G are 
 
 #### Bipartite Graph
 
-A bipartite graph is a graph whose set of nodes can be split into two subsets $A$ and $B$ in such a way that each edge of the graph joins a node in $A$ and a node in $B$. In Figure @bipartite@, the two subsets are $\{A1, A2, A3, A4, A5\}$ and $\{B1, B2, B3, B4\}$.
+A bipartite graph is a graph whose set of nodes can be split into two subsets $A$ and $B$ in such a way that each edge of the graph joins a node in $A$ and a node in $B$. In Figure *@bipartite@*, the two subsets are $\{A1, A2, A3, A4, A5\}$ and $\{B1, B2, B3, B4\}$.
 A *complete* bipartite graph is a bipartite graph in which each node in A is joined to each node in B by just one edge.
 
 ![A bipartite graph: the nodes are split into two subsets.](figures/bipartite.png width=48&label=bipartite)
