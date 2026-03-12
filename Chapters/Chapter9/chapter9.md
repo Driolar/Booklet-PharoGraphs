@@ -65,9 +65,9 @@ The Hopcroft-Karp algorithm uses the concept of augmenting paths and a level gra
 
 These steps are repeated until no more augmenting paths can be found, at which point the algorithm terminates with the maximum matching.
 
-`AIHopcroftCarp>>run` answers the matching cardinality. `AIHopcroftCarp>>matchingEdgeTuples` answers the concrete matching edges (as tuples) after the run.
+`AIHopcroftKarp>>run` answers the matching cardinality. `AIHopcroftKarp>>matchingEdgeTuples` answers the concrete matching edges (as tuples) after the run.
 
-The Hopcroft-Carp algorithm is basically a special *optimization* of Dinic's algorithm for bipartite unweighted graphs. You find the description of Dinic's algorithm including the augmenting path and level graph concepts in Chapter *@cha:maxflow@*. 
+The Hopcroft-Karp algorithm is basically a special *optimization* of Dinic's algorithm for bipartite unweighted graphs. You find the description of Dinic's algorithm including the augmenting path and level graph concepts in Chapter *@cha:maxflow@*. 
 
 ### Stable matchings
 
@@ -108,3 +108,4 @@ Depending on the context, approximation algorithms may be a suitable alternative
 From the practical and theoretical points of view, envisaging the special case of bipartite graphs is very common and fructiferous, notably for matching problems.
 
 Both the greedy and the stable matching algorithm presented here are further examples of using a working list until emptied, like discussed for the topological sorting in this book.
+
