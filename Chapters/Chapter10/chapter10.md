@@ -1,5 +1,7 @@
 ## Maximum Flow
 
+@cha:maxflow
+
 The Maximum Flow problem is about finding the maximum flow through a directed graph, from one node in the graph to another.
 
 The problem can be used to model a wide variety of real-world situations, such as transportation systems, communication networks, and resource allocation.
