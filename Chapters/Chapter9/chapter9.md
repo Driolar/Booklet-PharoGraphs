@@ -25,8 +25,8 @@ Similarly, a **minimum-weight** matching has the smallest sum of weights.
 
 ### A greedy algorithm for matching
 
-The algorithm for graph matching implemented in this library is a simple greedy algorithm with time complexity of $O(E * log(V))$.
-The class ```AIGraphMatchingAlgorithm``` can be instantiated to find an **approximation** either of the maximum-weight, the minimum-weight or the maximum-cardinality matching.
+There is a simple greedy algorithm for graph matching implemented in this library.
+The class ```AIGraphMatchingAlgorithm``` can be instantiated to find an **approximation** either of the maximum-weight, the minimum-weight or the maximum-cardinality matching with time complexity of $O(E * log(V))$.
 
 For instance, the pseudocode to greedily find a matching of large weight is the following one:
 
@@ -52,6 +52,22 @@ To see that the result is not always optimal, consider the two matching versions
 ![Counterexample: The greedy algorithm is not optimal.](figures/epsilon.pdf width=50&label=epsilon)
 
 The greedy algorithm for maximum-weight would first take weight $1+ \epsilon$ and then stop (top matching in Figure *@epsilon@*), missing the optimal weight sum $1+1$ (bottom matching in Figure *@epsilon@*) .
+
+### Hopcroft-Karp algorithm
+
+The Hopcroft-Karp algorithm computes a matching of maximum-cardinality in an unweighted **bipartite** graph that may contain cycles. The algorithm runs in $O(E * \sqrt{V})$ time.
+
+The Hopcroft-Karp algorithm uses the concept of augmenting paths and a level graph to improve the efficiency of finding the maximum matching. It alternates between two main steps: 
+
+1. BFS (Breadth-First Search): This step constructs a level graph and finds the shortest augmenting paths from unmatched vertices in one set of the bipartite graph to unmatched vertices in the other set.
+
+2. DFS (Depth-First Search): This step finds augmenting paths that alternate between unmatched and matched edges, starting from an unmatched vertex in the first set. Once an augmenting path is found, the matching is updated.
+
+These steps are repeated until no more augmenting paths can be found, at which point the algorithm terminates with the maximum matching.
+
+`AIHopcroftCarp>>run` answers the matching cardinality. `AIHopcroftCarp>>matchingEdgeTuples` answers the concrete matching edges (as tuples) after the run.
+
+The Hopcroft-Carp algorithm is basically a special *optimization* of Dinic's algorithm for bipartite unweighted graphs. You find the description of Dinic's algorithm including the augmenting path and level graph concepts in Chapter *@cha:maxflow@*. 
 
 ### Stable matchings
 
