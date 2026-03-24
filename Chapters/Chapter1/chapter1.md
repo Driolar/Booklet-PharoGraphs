@@ -3,7 +3,7 @@
 Graphs are everywhere and there is well-known algorithms to get the best out of them.
 In this booklet the most common graph algorithms will be explained along with some case studies where these algorithms can be applied. These algorithms are available in the _Pharo AI_ _graph-algorithms_ library available at: [https://github.com/pharo-ai/graph-algorithms](https://github.com/pharo-ai/graph-algorithms).
 
-This booklet will describe and implement thess algorithms.
+This booklet will describe and implement these algorithms.
 
 ### Paris metro as graph example
 
